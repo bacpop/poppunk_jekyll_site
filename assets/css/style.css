@@ -7,12 +7,12 @@
  Author URI     : http://designingmarket.com
  Version        : 1.1
 
-  
+
       CSS INDEX
   =======================
 
- 0.0 Themeix Default CSS 
- 
+ 0.0 Themeix Default CSS
+
  1.Start Mainmenu
  1.1 Dropdown Menu
  2. Start Slider Area
@@ -22,14 +22,14 @@
  6.Start Live Chat
  7.Start Contact Form Area
  8. Testimonials
- 9. Start Footer Area 
+ 9. Start Footer Area
  10. Start Footer Bottom Area
  11. updates page
  12. Start Undate News
  13. Modal Style
  14. Start Call To Action Area
  15. Contact Page
- 16. Blog Page 
+ 16. Blog Page
  17. Blog Details Page
  18. Start 404 Page
  19. Login Page
@@ -43,7 +43,7 @@
 
 /*********************************************************
 
-  0.0 Themeix Default CSS 
+  0.0 Themeix Default CSS
 
 ************************************************************/
 
@@ -80,11 +80,12 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: #666666;
-    line-height: 25px;	
+    line-height: 25px;
 }
 ul {
-    list-style: none;
-    margin: 0;
+    /* list-style: none; */
+    margin-left: 30px;
+    margin-bottom: 15px;
     padding: 0;
 }
 a {
@@ -121,7 +122,7 @@ img {
     font-size: 16px;
     text-transform: capitalize;
     border: medium none;
-    border-radius: 4px;	
+    border-radius: 4px;
 }
 .themeix-col-2 {
     width: 50%;
@@ -213,6 +214,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
     -webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }
+
 /***********************************
 
 1.Start Mainmenu
@@ -231,7 +233,7 @@ input:-webkit-autofill:focus {
    padding-top:18px;
    padding-bottom:18px;
     text-align:left;
-text-transform: capitalize;	
+text-transform: capitalize;
 }
 .top-menu > nav > ul > li > a > span {
     display: block;
@@ -253,10 +255,10 @@ text-transform: capitalize;
     color: #333333;
 }
 .header-logo {
-    padding-top: 18px;
+    padding-top: 15px;
 }
 .header-logo img {
-    max-height: 31px;
+    max-height: 45px;
 }
 .nav > li > a:focus,
 .nav > li > a:hover {
@@ -355,7 +357,7 @@ ul.dropdown li a span {
     height: 100%;
 }
 
- 
+
 .slider-buttons {
     margin-top: 30px;
 }
@@ -364,7 +366,7 @@ ul.dropdown li a span {
     padding: 15px 30px;
     font-size: 18px;
 }
- 
+
 
 /*---------- Bootstrap Slider ----------*/
 .bs-slider{
@@ -571,7 +573,7 @@ ul.dropdown li a span {
 }
 
 .slide-text > h1 {
-    
+
     padding: 0;
     color: #ffffff;
     font-size: 70px;
@@ -641,13 +643,13 @@ ul.dropdown li a span {
     -webkit-transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
     transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
 }
- 
- 
- 
- 
+
+
+
+
 /*************************************
 
-particles js css 
+particles js css
 
 ********************************************/
 
@@ -659,7 +661,7 @@ canvas {
 
 /* ---- particles.js container ---- */
 
- 
+
 
 canvas {
     display: block;
@@ -801,7 +803,7 @@ background-color: transparent!important;
     visibility:visible;
 }
 .single-box:hover .box-inner {
-   transform:rotateY(-180deg); 
+   transform:rotateY(-180deg);
 }
 
 /**********************************
@@ -918,7 +920,7 @@ background-color: transparent!important;
 6.Start Live Chat
 
 **********************/
- 
+
 
 .live-chat {
     position: relative;
@@ -982,7 +984,7 @@ background-color: transparent!important;
 }
 /*******************************
 
-7.Start Contact Form Area 
+7.Start Contact Form Area
 
 *******************************/
 
@@ -1091,7 +1093,7 @@ textarea.form-control {
 }
 /************************************************************
 
-8. Testimonials 
+8. Testimonials
 
 *************************************************************/
 
@@ -1163,7 +1165,7 @@ textarea.form-control {
 .footer-heading {
     font-size: 20px;
     color: #666666;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 .social-links ul li {
     display: inline-block;
@@ -1282,6 +1284,10 @@ textarea.form-control {
 .footer-logo {
     padding-bottom: 20px;
 }
+.footer-logo img {
+    max-height: 120px;
+}
+
 .copyright-text a {
     color: #2196F3;
 }
@@ -1461,18 +1467,28 @@ span.sub-title a {
     font-weight: 300;
 }
 
+.action-content a {
+    color: #ffffff;
+    -webkit-transition: all .4s linear 0s;
+    transition: all .2s linear 0s;
+    border-bottom: 1px dotted white;
+}
+
+.action-content a:hover {
+    color: #000000;
+}
 
 .call-to-action-area a.themeix-purchase-btn,
 .call-to-action-area a.themeix-purchase-btn-3,
  .call-to-action-area a.themeix-purchase-btn-2 {
     padding: 18px 25px;
     font-size: 16px;
-    text-transform: CAPITALIZE;
+    /* text-transform: CAPITALIZE; */
     font-weight: 500;
     border-radius: 4px;
 
     -webkit-transition: all .4s linear 0s;
-    transition: all .4s linear 0s;	
+    transition: all .4s linear 0s;
 }
 .themeix-purchase-btn {
       background-color: #fff;
@@ -1493,7 +1509,7 @@ span.sub-title a {
 }
 .themeix-purchase-btn-3 {
     background-color: #fff;
-    color: #2196F3;	
+    color: #2196F3;
 }
 .themeix-purchase-btn-3:hover {
     background-color: #71c668;
@@ -1536,7 +1552,7 @@ span.sub-title a {
 }
 /**************************************
 
-16. Blog Page 
+16. Blog Page
 
 ***********************************/
 
@@ -1544,6 +1560,17 @@ span.sub-title a {
 .blog-content-desc .themeix-blog-h {
     padding-top: 20px;
 }
+
+.blog-content-desc a {
+    color: #288feb;
+    -webkit-transition: all .4s linear 0s;
+    transition: all .4s linear 0s;
+}
+
+.blog-content-desc a:hover {
+    color: #323232;
+}
+
 .themeix-blog-h a,
 .themeix-blog-h {
     color: #323232;
@@ -1666,7 +1693,7 @@ span.sub-title a {
 .popular-questions {
     overflow: hidden;
 
-    
+
 }
 .popular-questions ul li a {
    display: block;
@@ -1958,10 +1985,10 @@ a.comment-reply:hover {
     appearance: none;
     -moz-appearance: none;
     /* Firefox */
-    
+
     -webkit-appearance: none;
     /* Safari and Chrome */
-    
+
     width: 100px;
     height: 35px;
     background-color: #eef4f9;
@@ -2504,7 +2531,7 @@ a.comment-reply:hover {
 
 
 
- 
+
 /**************************************
 
 25. About-us
@@ -3256,7 +3283,7 @@ a.comment-reply:hover {
     font-weight: 300;
     color: #fff;
     line-height: 36px;
-    margin-bottom: 20px;	
+    margin-bottom: 20px;
 }
 .our-history-area .themeix-section-title {
     padding-bottom: 35px;
@@ -3482,7 +3509,7 @@ Pagination
 }
 
 /***********
-hide 
+hide
 *************/
 .post-header {
     display:none;
@@ -3492,7 +3519,7 @@ hide
 }
 .timeline-Widget--edge {
   background-color:#eef4f9 !important;
-  
+
 
 }
 
