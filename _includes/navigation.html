@@ -72,7 +72,8 @@
 
                                 <nav>
                                     <ul class="nav navbar-nav">
-                                    {% for pageinfo in site.pages %}
+                                    {% assign sorted_pages = site.pages | sort:"order" %}
+                                    {% for pageinfo in sorted_pages %}
                                     {% if pageinfo.navigation == true %}
                                      <li>
                                         <a href="{{pageinfo.url}}">{{pageinfo.title}}

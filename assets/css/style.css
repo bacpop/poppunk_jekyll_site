@@ -117,8 +117,8 @@ img {
 .themeix-btn {
     padding: 10px 20px;
     display: inline-block;
-    -webkit-transition: all .4s linear 0s;
-    transition: all .4s linear 0s;
+    -webkit-transition: all .2s linear 0s;
+    transition: all .2s linear 0s;
     font-size: 16px;
     text-transform: capitalize;
     border: medium none;
@@ -342,13 +342,13 @@ ul.dropdown li a span {
 .slider-wrapper-2 {
     height: 600px;
     text-align: center;
-    background: url(../images/slider.jpg);
+    /* background: url(../images/slider.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
 }
 .slider-wrapper-2:after {
-    background-color: rgba(33, 150, 243, 0.95);
+    background-color: rgba(253, 68, 77, 0.95);
     position: absolute;
     content: "";
     top: 0;
@@ -715,6 +715,7 @@ canvas {
 #partical-js {
     height:650px;
 }
+/*
 .slider {
     background-image:url("../images/bg3.jpg");
     background-repeat: no-repeat;
@@ -722,6 +723,7 @@ canvas {
     background-attachment: fixed;
     text-align:center;
 }
+*/
 
 /***********************************
 
@@ -748,7 +750,7 @@ background-color: #fff;
 }
 .single-box p {
     font-size: 16px;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 .box-inner .themeix-btn {
     margin-top: 15px;
@@ -1454,6 +1456,8 @@ span.sub-title a {
 *****************************************/
 
 .call-to-action-area {
+    /* background-color: rgb(196, 50, 57); */
+    background-color: #2196F3;
     padding: 55px 0;
 }
 .action-content h2 {
