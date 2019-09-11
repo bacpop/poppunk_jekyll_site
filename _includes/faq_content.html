@@ -5,80 +5,134 @@
 
                 <div class="col-md-9">
                     <div class="themeix-section-title">
-                        <h2>Frequently Asked Questions</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+                        <h2>Questions</h2>
                     </div>
                     <div class="faq-tab-wrapper">
                         <div class="panel-group" id="accordion">
                             <div class="panel panel-default themeix-panel">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                       <a  data-toggle="collapse" data-parent="#accordion" class="minus-sign" href="#accordion-one">What is documenter?</a>
+                                       <a  data-toggle="collapse" data-parent="#accordion" class="minus-sign" href="#accordion-one">What is PopPUNK?</a>
                                    </h4>
                                 </div>
                                 <div id="accordion-one" class="panel-collapse collapse in">
                                     <div class="panel-body">
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                                        <p>PopPUNK is software for bacterial genomic epidemiology.
+                                            It can rapidly calculate core and accessory distances between genomes, use these distances to cluster genomes,
+                                            assign clusters to new genomes using an existing database, and produce visualisations of these outputs.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="panel panel-default themeix-panel">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                       <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#accordion-two">Can you help me customize my site ?</a>
+                                       <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#accordion-two">How does it work?</a>
                                    </h4>
                                 </div>
                                 <div id="accordion-two" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                                        <p>PopPUNK uses comparisons of sequence content at a range of k-mer (substring) lengths to fit a relationship
+                                            between core and accessory distances (the 'database'). Sketching is used to reduce the number of k-mers that need to be kept,
+                                            massively increasing efficiency.</p>
+                                        <p>Machine learning methods (Gaussian mixture model or HDBSCAN) are used to
+                                            form spatial clusters of these distances in core-accessory space, from which a 'within-strain' component is then
+                                            identified (the 'model').</p>
+                                        <p>These within-strain distances are used to connect samples in a network (the 'network'),
+                                            in which the connected components become the PopPUNK clusters. The network can be further reduced in size (to 'references')
+                                            by removing redundant samples, which increases the speed of future assignment without loss of accuracy.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="panel panel-default themeix-panel">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#accordion-three">What kind of your themes?</a>
+                                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#accordion-three">What is the best way to use it?</a>
                                    </h4>
                                 </div>
                                 <div id="accordion-three" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                                        <p>For most users, if an existing species database is available we highly recommend you use it to assign queries, as
+                                            the model fit has already been verified, it will be quicker, will allow you to use existing nomenclature, and put
+                                            your input into the context of the species. You can do this through your browser, Galaxy server, or on the command line
+                                            with <code class="highlighter-rouge">--assign-query</code>.
+                                        </p>
+                                        <p>If you have a new species, want to look at the core and accessory distances in your population, or are doing something
+                                            unusual it will be best create your own database and model fit. These tasks can be achieved either on the command line
+                                            or Galaxy server.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="panel panel-default themeix-panel">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                       <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#accordion-four">How do I activate the forum ?</a>
+                                       <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#accordion-four">What advantages does it have over other methods?</a>
                                    </h4>
                                 </div>
                                 <div id="accordion-four" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                                        <p>Potential benefits of using PopPUNK (compared to cgMLST or statistical models such as BAPS):
+                                            <ul>
+                                                <li>Fast to run, and no alignment needed for input.</li>
+                                                <li>Clusters represent biology, not arbitrary thresholds.</li>
+                                                <li>Existing schemes can be used, with consistent nomenclature.</li>
+                                                <li>Small clusters and singletons are not binned together.</li>
+                                            </ul>
+                                            But try it yourself to find out what you do or don't like, then let us know!
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="panel panel-default themeix-panel">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                       <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#accordion-five">Do I need special software ?</a>
+                                       <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#accordion-five">How do I know my results are correct?</a>
                                    </h4>
                                 </div>
                                 <div id="accordion-five" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                                        <p>The main thing to check is that the 'within-strain' component of the model has been correctly identified. K-mer length
+                                           issues should now be automatically flagged, but you may wish to add <code class="highlighter-rouge">--plot-fit</code>
+                                           to check these fits are roughly straight lines. Looking at the clusters compared to a tree (possibly the NJ tree output
+                                           by PopPUNK) will tell you whether clusters are too tight or too diverse. You can also plot intra-cluster distances.
+                                        </p>
+                                        <p></p>
+                                           See <a href="https://poppunk.readthedocs.io/en/latest/troubleshooting.html" target="_blank">troubleshooting</a>
+                                           in the docs for more details and examples.
+                                        </p>
+                                        <p>Using an existing model, if available, has fewer risks. You may still wish to check the results within one of the visualisation tools,
+                                           and ensure there were no warning messages (which can occur if the database/model/clusters are different versions).
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="panel panel-default themeix-panel">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                       <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#accordion-six">Do I need special software ?</a>
+                                       <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#accordion-six">What command line options should I be using?</a>
                                    </h4>
                                 </div>
                                 <div id="accordion-six" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                                        <p>We would generally recommend adding <code class="highlighter-rouge">--microreact</code> or another visualisation option to
+                                            get more output options.</p>
+                                        <p>If you are refining a model, try adding <code class="highlighter-rouge">--indiv-refine</code> for more clustering options
+                                            (using only core or accessory distances).</p>
+                                        <p>If you are having issues with QC that are not solved by removing invalid samples, try increasing  <code class="highlighter-rouge">--max-a-dist</code>
+                                           and/or adding <code class="highlighter-rouge">--ignore-length</code>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default themeix-panel">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                       <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#accordion-seven">I am having a problem, what should I do?</a>
+                                   </h4>
+                                </div>
+                                <div id="accordion-seven" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>Please report issues with the code on the <a href="https://github.com/johnlees/PopPUNK/issues" target="_blank">GitHub issue tracker</a>. With any bugs please include the command run, a description of the data, and a copy of the error message so we can do our best to fix it. For broader questions please contact us directly.</p>
                                     </div>
                                 </div>
                             </div>

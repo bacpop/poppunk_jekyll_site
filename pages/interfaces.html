@@ -3,63 +3,159 @@ title: Interfaces
 layout: page
 navigation: true
 sub_title: Use PopPUNK
-order: 2
+order: 3
 ---
 
 {% include page_banner.html %}
-<section class="blog-area themeix-ptb">
-   <div class="container">
-       <div class="row">
-           <!-- Start Blog Content -->
-           <div class="col-md-9">
-               <div class="blog-wrapper">
-                     <div class="blog-content-desc">
 
-                        <p>A full description of the method can be found in the <a href="https://doi.org/10.1101/gr.241455.118">paper</a>.</p>
-
-                        <p><code class="highlighter-rouge">PopPUNK</code> uses the fast k-mer distance estimation enabled by <a href="https://mash.readthedocs.io/en/latest/&gt;">mash</a>
-                        to calculate core and accessory distances between all pairs of isolates of bacteria in a collection. By clustering
-                        these distances into 'within-strain' and 'between-strain' distances a network
-                        of within-strain comparisons can be constructed. The use of a network has
-                        a number of convenient properties, the first being that the connected
-                        components represent a cluster of strains.</p>
-
-                        <p>As well as identifying strains, the pairwise distance distribution also helps
-                        with assembly quality control (particularly in the case of contaminated
-                        contigs) and may be informative of the level of recombination in the
-                        population. The network representation also allows definition of representative isolates by
-                        sampling one example from each clique, and calculation of various statistics
-                        which can show how good the clustering is.</p>
-
-                        <p>The advantages of this approach are broadly that:</p>
-
-                        <ul>
-                           <li> It is fast, and scalable to 10^4 genomes in a single run.
-                           <li>Assigning new query sequences to a cluster using an existing database is scalable even beyond this.
-                           <li>Databases can be updated online (as sequences arrive).
-                           <li>Online updating is equivalent to building databases from scratch.
-                           <li>Databases can be kept small and managable by only keeping representative isolates.
-                           <li>There is no bin cluster. Outlier isolates will be in their own cluster.
-                           <li>Pre-processing, such as generation of an alignment, is not required.
-                           <li>The definition of clusters is biologically relevant to how bacteria evolve.
-                           <li>There is a lot of quantitative and graphical output to assist with clustering.
-                           <li>A direct import into  <a href="https://microreact.org/">microreact</a> is
-                           available, as well as <a href="http://www.cytoscape.org/&gt;">cytoscape</a>,
-                           <a href="http://dx.doi.org/10.1101/gr.232397.117&gt;">grapetree</a> and
-                           <a href="http://jameshadfield.github.io/phandango/">phandango</a>.</li>
-                           <li>Everything is available within a single python executable.</li>
-                        </ul>
-
-                        <h2 id="citation">Citation:</h2>
-                        <p>If you find PopPUNK useful, please cite as:</p>
-
-                        <p>Lees JA, Harris SR, Tonkin-Hill G, Gladstone RA, Lo SW, Weiser JN, Corander J, Bentley SD, Croucher NJ. Fast and flexible
-                        bacterial genomic epidemiology with PopPUNK. <em>Genome Research</em> <strong>29</strong>:1-13 (2019).
-                        doi:<a href="https://dx.doi.org/10.1101/gr.241455.118">10.1101/gr.241455.118</a></p>
+<!-- Start databases  -->
+<div class="update-news-wrapper themeix-ptb">
+  <div class="container">
+         <div class="row">
+             <div class="col-sm-6 col-md-4">
+                 <div class="update-box">
+                     <div class="update-version">
+                         <h2>In-browser</h2>
+                         <span class="badge update-badge">new</span>
                      </div>
-               </div>
-            </div>
+                     <h3>Using pathogen.watch</h3>
+                     <p>Drag-and-drop files to assign clusters and add them into the population.</p>
+                     <button type="button" class="update-btn" data-toggle="modal" data-target="#update-one" >See features</button>
+                     <div id="update-one" class="modal fade">
+                         <div class="modal-dialog modal-lg">
+                             <div class="modal-content">
+                                 <div class="modal-heading clearfix">
+                                     <h3 class="modal-title">In-browser</h3>
+                                 </div>
+                                 <div class="modal-body clearfix">
+                                     <div class="col-sm-6">
+                                        <h4 class="modal-subtitle">Available features</h4>
+                                      <div class="feature-list">
+                                        <ul>
+                                           <li>Drag-and-drop your data, no bioinformatics needed.</li>
+                                           <li>No choice of parameters needed.</li>
+                                           <li>Use and assign existing cluster names.</li>
+                                           <li>Add your data into global context.</li>
+                                        </ul>
+                                      </div>
+                                     </div>
+                                     <div class="col-sm-6">
+                                        <h4 class="modal-subtitle">Not yet available</h4>
+                                        <div class="todo-list">
+                                        <ul>
+                                           <li>Only for <em>Streptococcus pneumoniae</em>.</li>
+                                           <li>No subcluster analysis.</li>
+                                           <li>No global trees.</li>
+                                           <li>No customisation.</li>
+                                         </ul>
+                                        </div>
+                                     </div>
+                                 </div>
+                                 <div class="modal-footer clearfix">
+                                     <a class="themeix-btn hover-bg" href="https://pathogen.watch/genomes/all?genusId=1301&speciesId=1313">Try it out</a>
+                                     <button type="button" class="themeix-btn danger-bg" data-dismiss="modal">Close</button>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-sm-6 col-md-4">
+                 <div class="update-box">
+                     <div class="update-version">
+                         <h2>Command line</h2>
+                     </div>
+                     <h3>Run python executable</h3>
+                     <p>Use PopPUNK directly from the command line.</p>
+                     <button type="button" class="update-btn" data-toggle="modal" data-target="#update-two" >See features</button>
+                     <div id="update-two" class="modal fade">
+                         <div class="modal-dialog modal-lg">
+                             <div class="modal-content">
+                                 <div class="modal-heading clearfix">
+                                     <h3 class="modal-title">Command line</h3>
+                                 </div>
+                                 <div class="modal-body clearfix">
+                                     <div class="col-sm-6">
+                                        <h4 class="modal-subtitle">Advantages</h4>
+                                      <div class="feature-list">
+                                        <ul>
+                                           <li>All options available.</li>
+                                           <li>As flexible as possible.</li>
+                                           <li>Full documentation available.</li>
+                                           <li>Use any available mode, fit a new model or use an existing one.</li>
+                                           <li>Easy to install using conda.</li>
+                                        </ul>
+                                      </div>
+                                     </div>
+                                     <div class="col-sm-6">
+                                        <h4 class="modal-subtitle">Disadvantages</h4>
+                                        <div class="todo-list">
+                                        <ul>
+                                           <li>Requires some Unix/command line knowledge.</li>
+                                           <li>Not yet available for Windows.</li>
+                                           <li>Read documentation to understand usage options and parameters.</li>
+                                         </ul>
+                                        </div>
+                                     </div>
+                                 </div>
+                                 <div class="modal-footer clearfix">
+                                     <a class="themeix-btn hover-bg" href="https://poppunk.readthedocs.io/en/latest/installation.html">Install now</a>
+                                     <button type="button" class="themeix-btn danger-bg" data-dismiss="modal">Close</button>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-sm-6 col-md-4">
+                 <div class="update-box">
+                     <div class="update-version">
+                         <h2>Galaxy wrapper</h2>
+                     </div>
+                     <h3>Install on a Galaxy server</h3>
+                     <p>Graphical interface and integrated data access to create new databases.</p>
+                     <button type="button" class="update-btn" data-toggle="modal" data-target="#update-three" >See features</button>
+                     <div id="update-three" class="modal fade">
+                         <div class="modal-dialog modal-lg">
+                             <div class="modal-content">
+                                 <div class="modal-heading clearfix">
+                                     <h3 class="modal-title">Galaxy wrapper</h3>
+                                 </div>
+                                 <div class="modal-body clearfix">
+                                     <div class="col-sm-6">
+                                        <h4 class="modal-subtitle">Available features</h4>
+                                      <div class="feature-list">
+                                        <ul>
+                                           <li>Use a graphical interface to run PopPUNK.</li>
+                                           <li>Upload your data via Galaxy.</li>
+                                           <li>All command line options are available.</li>
+                                        </ul>
+                                      </div>
+                                     </div>
+                                     <div class="col-sm-6">
+                                        <h4 class="modal-subtitle">Not yet available</h4>
+                                        <div class="todo-list">
+                                        <ul>
+                                           <li>Only database creation and model fit supported.</li>
+                                           <li>Assign query mode not yet implemented.</li>
+                                           <li>Read documentation to understand usage options and parameters.</li>
+                                           <li>Difficult to re-use intermediate outputs without re-running.</li>
+                                         </ul>
+                                        </div>
+                                     </div>
+                                 </div>
+                                 <div class="modal-footer clearfix">
+                                     <a class="themeix-btn hover-bg" href="https://toolshed.g2.bx.psu.edu/view/johnlees/poppunk/a3613553c65f">View on Galaxy toolshed</a>
+                                     <button type="button" class="themeix-btn danger-bg" data-dismiss="modal">Close</button>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
          </div>
-      </div>
-   </section>
+     </div>
+</div>
+<!-- End databases  -->
+
 
