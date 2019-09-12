@@ -1352,8 +1352,13 @@ span.sub-title a {
 
 ***************************************/
 
+.update-news-wrapper {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
 .update-box {
-    min-height: 355px;
+    min-height: 400px;
     background-color: #eef4f9;
     text-align: center;
     margin: 15px 0;
