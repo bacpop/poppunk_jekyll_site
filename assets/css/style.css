@@ -111,6 +111,9 @@ img {
     padding-top: 100px;
     padding-bottom: 100px;
 }
+.themeix-pt {
+  padding-top: 80px;
+}
 .themeix-pb {
     padding-bottom: 80px;
 }
@@ -1353,7 +1356,7 @@ span.sub-title a {
 ***************************************/
 
 .update-news-wrapper {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 

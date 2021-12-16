@@ -16,42 +16,35 @@ order: 1
                <div class="blog-wrapper">
                      <div class="blog-content-desc">
 
-                        <p>A full description of the method can be found in the <a href="https://doi.org/10.1101/gr.241455.118">paper</a>.</p>
+                      <p><code class="highlighter-rouge">PopPUNK</code> is a tool for clustering genomes. We refer to the clusters as variable-length-k-mer clusters, or VLKCs.
+                        Biologically, these clusters typically represent distinct strains. We refer to subclusters of strains as lineages.</p>
 
-                        <p><code class="highlighter-rouge">PopPUNK</code> uses the fast k-mer distance estimation enabled by <a href="https://mash.readthedocs.io/en/latest/&gt;">mash</a>
-                        to calculate core and accessory distances between all pairs of isolates of bacteria in a collection. By clustering
-                        these distances into 'within-strain' and 'between-strain' distances a network
-                        of within-strain comparisons can be constructed. The use of a network has
-                        a number of convenient properties, the first being that the connected
-                        components represent a cluster of strains.</p>
+                      <p>The first version was targeted specifically as bacterial genomes, but the current version has also been used for viruses
+                        (e.g. enterovirus, influenza, SARS-CoV-2) and eukaryotes (e.g. <em>Candida sp.</em>, <em>P. falciparum</em>).</p>
 
-                        <p>As well as identifying strains, the pairwise distance distribution also helps
-                        with assembly quality control (particularly in the case of contaminated
-                        contigs) and may be informative of the level of recombination in the
-                        population. The network representation also allows definition of representative isolates by
-                        sampling one example from each clique, and calculation of various statistics
-                        which can show how good the clustering is.</p>
+                      <p>Under the hood, PopPUNK uses <a href="https://github.com/johnlees/pp-sketchlib" target="_blank">pp-sketchlib</a> to rapidly
+                        calculate core and accessory distances, and machine learning tools written in python to use these to cluster genomes.
+                        A detailed description of the method can be found in the <a href="https://doi.org/10.1101/gr.241455.118">paper</a>.
 
-                        <p>The advantages of this approach are broadly that:</p>
+                      <p>If you are new to PopPUNK, we’d recommend starting reading the <a href="https://poppunk.readthedocs.io/en/latest/best_practises.html" target="_blank">best practises guide</a>.
 
+
+                        <h2>Related tools</h2>
+
+                        <p>As well as the 'core' tool of PopPUNK for genomic epidemiology, the following related packages are also available</p>
                         <ul>
-                           <li> It is fast, and scalable to 10^4 genomes in a single run.
-                           <li>Assigning new query sequences to a cluster using an existing database is scalable even beyond this.
-                           <li>Databases can be updated online (as sequences arrive).
-                           <li>Online updating is equivalent to building databases from scratch.
-                           <li>Databases can be kept small and managable by only keeping representative isolates.
-                           <li>There is no bin cluster. Outlier isolates will be in their own cluster.
-                           <li>Pre-processing, such as generation of an alignment, is not required.
-                           <li>The definition of clusters is biologically relevant to how bacteria evolve.
-                           <li>There is a lot of quantitative and graphical output to assist with clustering.
-                           <li>A direct import into  <a href="https://microreact.org/">microreact</a> is
-                           available, as well as <a href="http://www.cytoscape.org/&gt;">cytoscape</a>,
-                           <a href="http://dx.doi.org/10.1101/gr.232397.117&gt;">grapetree</a> and
-                           <a href="http://jameshadfield.github.io/phandango/">phandango</a>.</li>
-                           <li>Everything is available within a single python executable.</li>
+                          <li><a href="https://github.com/johnlees/pp-sketchlib" target="_blank">pp-sketchlib</a>
+                            (installed as <code class="highlighter-rouge">poppunk_sketch</code>) is a high performance genomes
+                            sketching library developed specifically for PopPUNK. It can rapidly calculate pairwise core and accessory
+                            distances between long genomes, and makes use of multiple CPUs or even GPUs. It can also be used standalone
+                            as a drop-in replacement for mash, and supports faster queries, uses smaller databases on disk, and a wider
+                            range of sequence types.</li>
+                          <li><a href="https://github.com/johnlees/poppipe" target="_blank">PopPIPE</a> is a pipeline which automates
+                            some common downstream analyses on strains defined by PopPUNK. It produces subclusters, maximum likelihood trees
+                            and associated visualisations using a computationally efficient approach.</li>
                         </ul>
 
-                        <h2 id="citation">Citation:</h2>
+                        <h2 id="citation">Citation</h2>
                         <p>If you find PopPUNK useful, please cite as:</p>
 
                         <p>Lees JA, Harris SR, Tonkin-Hill G, Gladstone RA, Lo SW, Weiser JN, Corander J, Bentley SD, Croucher NJ. Fast and flexible

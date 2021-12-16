@@ -52,14 +52,13 @@
                                 </div>
                                 <div id="accordion-three" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p>For most users, if an existing species database is available we highly recommend you use it to assign queries, as
+                                        <p>For most users, if an existing species database is available we highly recommend you use it to <a href="https://poppunk.readthedocs.io/en/latest/query_assignment.html" target="_blank">assign queries</a>, as
                                             the model fit has already been verified, it will be quicker, will allow you to use existing nomenclature, and put
                                             your input into the context of the species. You can do this through your browser, Galaxy server, or on the command line
-                                            with <code class="highlighter-rouge">--assign-query</code>.
+                                            with <code class="highlighter-rouge">poppunk_assign</code>.
                                         </p>
                                         <p>If you have a new species, want to look at the core and accessory distances in your population, or are doing something
-                                            unusual it will be best create your own database and model fit. These tasks can be achieved either on the command line
-                                            or Galaxy server.
+                                            unusual it will be best create your own database and model fit. You will typically need to do this via the command line.
                                         </p>
                                     </div>
                                 </div>
@@ -104,23 +103,6 @@
                                         <p>Using an existing model, if available, has fewer risks. You may still wish to check the results within one of the visualisation tools,
                                            and ensure there were no warning messages (which can occur if the database/model/clusters are different versions).
                                         </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default themeix-panel">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                       <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#accordion-six">What command line options should I be using?</a>
-                                   </h4>
-                                </div>
-                                <div id="accordion-six" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <p>We would generally recommend adding <code class="highlighter-rouge">--microreact</code> or another visualisation option to
-                                            get more output options.</p>
-                                        <p>If you are refining a model, try adding <code class="highlighter-rouge">--indiv-refine</code> for more clustering options
-                                            (using only core or accessory distances).</p>
-                                        <p>If you are having issues with QC that are not solved by removing invalid samples, try increasing  <code class="highlighter-rouge">--max-a-dist</code>
-                                           and/or adding <code class="highlighter-rouge">--ignore-length</code>.</p>
                                     </div>
                                 </div>
                             </div>

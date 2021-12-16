@@ -8,19 +8,55 @@ order: 4
 
    {% include page_banner.html %}
 
+   <section class="blog-area themeix-pt">
+    <div class="container">
+        <div class="row">
+            <!-- Start Blog Content -->
+            <div class="col-md-9">
+                <div class="blog-wrapper">
+                      <div class="blog-content-desc">
+
+                         <p>Databases come in two flavours: <b>reference only</b>, or <b>all genomes.</b></p>
+
+                         <p>Typically, the reference only database will be sufficient for the main use case of assigning
+                           new samples to PopPUNK clusters, and updating the database with new clusters which have been
+                           found. The reference databases are usually significantly smaller.
+                         </p>
+
+                         <p>For more detailed analyses, you may wish to download the all genomes database. If you wish to run either
+                          <code class="highlighter-rouge">poppunk-visualise</code> or any subclustering within strains this will
+                          require the full database.
+                        </p>
+
+                        <p>In either case only the reference genomes will actually be used for query assignment, which does not change
+                          the results but gives a good speed up in program runtime.
+                        </p>
+
+                         <p>See the <a href="https://poppunk.readthedocs.io/en/latest/model_distribution.html" target="_blank">distributing models doc page</a> for more details.</p>
+
+
+                      </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+
     <!-- Start databases  -->
-    <div class="update-news-wrapper themeix-ptb">
+    <div class="update-news-wrapper themeix-pb">
       <div class="container">
+                          <h1>Database list:</h1>
              <div class="row">
                  <div class="col-sm-6 col-md-4">
                      <div class="update-box">
                          <div class="update-version">
                              <h2><em>Streptococcus pneumoniae</em></h2>
                          </div>
-                         <h3>34,780 genomes</h3>
+                         <h3>42,157 genomes</h3>
                          <p>From the <a href="https://doi.org/10.1016/j.ebiom.2019.04.021" target="_blank">Global Pneumococcal Surveillance</a> project, and other sequence collections.
-                        Used to assign global pneumococcal sequence clusters (GPSCs).</p>
-                            <a href="https://www.pneumogen.net/gps/assigningGPSCs.html" class="themeix-btn danger-bg">Assign GPSCs</a>
+                        Used to assign <a href="https://www.pneumogen.net/gps/assigningGPSCs.html" target="_blank">global pneumococcal sequence clusters (GPSCs)</a>.</p>
+                            <a href="https://sketchdb.blob.core.windows.net/public-dbs/GPS_v4_references.tar.bz2" class="themeix-btn danger-bg">References only</a>
+                            <a href="https://sketchdb.blob.core.windows.net/public-dbs/GPS_v4_full.tar.bz2" class="themeix-btn danger-bg">All genomes</a>
                      </div>
                  </div>
                  <div class="col-sm-6 col-md-4">
@@ -28,19 +64,21 @@ order: 4
                             <div class="update-version">
                                 <h2><em>Streptococcus pyogenes</em> (group A <em>Streptococcus</em>)</h2>
                             </div>
-                            <h3>2,083 genomes</h3>
-                            <p>Global sample from <a href="https://www.nature.com/articles/s41588-019-0417-8" target="_blank">Davies et al.</a></p>
-                               <a href="https://doi.org/10.6084/m9.figshare.6931439" class="themeix-btn danger-bg">Download and use</a>
+                            <h3>2,084 genomes</h3>
+                            <p>From <a href="https://www.nature.com/articles/s41588-019-0417-8" target="_blank">Davies et al.</a></p>
+                              <a href="https://sketchdb.blob.core.windows.net/public-dbs/gas_references.tar.bz2" class="themeix-btn danger-bg">References only</a>
+                              <a href="https://sketchdb.blob.core.windows.net/public-dbs/gas_full.tar.bz2" class="themeix-btn danger-bg">All genomes</a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
                             <div class="update-box">
                                 <div class="update-version">
-                                    <h2><em>Other species</em></h2>
+                                    <h2><em>Escherichia coli</em></h2>
                                 </div>
-                                <h3>Up to 1,508 genomes</h3>
-                                <p>Databases for the ten species reported in the <a href="https://doi.org/10.1101/gr.241455.118" target="_blank">PopPUNK paper</a>.</p>
-                                   <a href="https://doi.org/10.6084/m9.figshare.6683624" class="themeix-btn danger-bg">Download and use</a>
+                                <h3>10,287 genomes</h3>
+                                <p>From <a href="http://dx.doi.org/10.1099/mgen.0.000499" target="_blank">Horesh et al.</a></p>
+                                   <a href="https://sketchdb.blob.core.windows.net/public-dbs/ecoli_pp.ref_only.tar.bz2" class="themeix-btn danger-bg">References only</a>
+                                   <a href="https://sketchdb.blob.core.windows.net/public-dbs/ecoli_pp.tar.bz2" class="themeix-btn danger-bg">All genomes</a>
                             </div>
                         </div>
                      </div>
