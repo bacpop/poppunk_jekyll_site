@@ -23,7 +23,7 @@ jobs:
           name: site_build
 
       - name: Untar site files
-        run: tar -xvf site_build/site.tar
+        run: tar -xvf site.tar
 
       - name: Upload files via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
