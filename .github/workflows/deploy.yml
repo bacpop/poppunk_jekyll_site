@@ -15,12 +15,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: actions/download-artifact@v2
+      - name: Download artifact
+        uses: dawidd6/action-download-artifact@v2
         with:
+          workflow: build.yml
+          workflow_conclusion: success
           name: site_build
 
       - name: Untar site files
-        run: tar -xvf site.tar ./_site/
+        run: tar -xvf site_build/site.tar
 
       - name: Upload files via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
