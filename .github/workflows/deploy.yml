@@ -1,0 +1,35 @@
+name: Upload built site via FTP
+
+on:
+  workflow_run:
+    workflows: ["Create site artifact"]
+    branches:
+      - master
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: site_build
+
+      - name: Untar site files
+        run: tar -xvf site.tar ./_site/
+
+      - name: Upload files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        with:
+          server: ${{ secrets.ftp_site }}
+          username: ${{ secrets.ftp_user }}
+          password: ${{ secrets.ftp_password }}
+          local-dir: ./_site/
+          server-dir: public_html/
+
+
+
